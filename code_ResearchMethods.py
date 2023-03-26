@@ -14,6 +14,8 @@ count = 0
 
 # Loop through each tweet in the data
 for tweet in tweets:
+    # Check if the tweet is a retweet (starts with 'RT')
+   if not tweet['text'].startswith('RT'):
     # Check if the word is in the tweet text
     if word_to_search in tweet['text']:
         # If it is, increment the counter
